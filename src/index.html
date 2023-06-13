@@ -1,0 +1,41 @@
+<title>Jardiance AI Assistant</title>
+<link rel="stylesheet" href="./style.css" />
+<link rel="shortcut icon" type="image/jpg" href="https://www.b2bcentral.co.za/wp-content/uploads/2020/07/GM.jpg" />
+<script src="https://cdn.botframework.com/botframework-webchat/4.4.1/webchat.js"></script>
+<script src="https://unpkg.com/@azure/storage-blob@10.3.0/browser/azure-storage.blob.min.js"
+  integrity="sha384-fsfhtLyVQo3L3Bh73qgQoRR328xEeXnRGdoi53kjo1uectCfAHFfavrBBN2Nkbdf" crossorigin="anonymous"></script>
+<div class="pva-floating-style">
+  <div class="heading">
+    <div class="bot-head">
+      <h1>Chat with AI Assistant</h1>
+      <div class="help">
+        <button class="bot-button" id="agent" onclick="sendMessage()" title="Talk to an agent"></button>
+        <button class="bot-button" id="reload" onclick="reloadBot()" title="Reload"></button>
+        <button class="bot-button" id="end" onclick="endConversation()" title="End conversation"></button>
+      </div>
+      </button>
+    </div>
+  </div>
+  <div id="buttonDiv">
+    <h4 style="font-style: normal !important; font-weight: bold !important;">Suggested Questions: </h4>
+    <button id="q1" class="btnQues" onclick="callHandler(this.id)">What is the size of the tablet?</button>
+    <button id="q2" class="btnQues" onclick="callHandler(this.id)">Can Jardiance be used for weight loss?</button>
+    <button id="q3" class="btnQues" onclick="callHandler(this.id)">What is Jardiance used for?</button>
+    <button id="q4" class="btnQues" onclick="callHandler(this.id)">When was Jardiance first approved by the FDA?</button>
+    <button id="q5" class="btnQues" onclick="callHandler(this.id)">How does Jardiance work for diabetes?</button>
+    <button id="q6" class="btnQues" onclick="callHandler(this.id)">Describe eGFR 20 versus eGFR 30?</button>
+  </div>
+  <div id="webchat" role="main">
+  </div>
+  <div class="loading">
+    <svg id="loading-bar" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="36" height="22" viewBox="0 0 36 22">
+      <g>
+        <rect id="loading-bar-left" width="8" height="22"/>
+        <rect id="loading-bar-middle" width="8" height="22" x="14"/>
+        <rect id="loading-bar-right" width="8" height="22" x="28"/>
+      </g>
+    </svg>
+  </div>
+</div>
+<script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+<script src="./bot.js"></script>
